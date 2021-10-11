@@ -37,32 +37,32 @@ spec:
             - name: NODE_ENV
               valueFrom:
                 configMapKeyRef:
-                  name: homework-5-config
+                  name: gateway-config
                   key: NODE_ENV
             - name: DATABASE_CONNECTION_STRING
               valueFrom:
                 secretKeyRef:
-                  name: homework-5-secret
+                  name: gateway-secret
                   key: DATABASE_URI
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: homework-5-secret
+                  name: gateway-secret
                   key: DB_USER
             - name: DB_PSWD
               valueFrom:
                 secretKeyRef:
-                  name: homework-5-secret
+                  name: gateway-secret
                   key: DB_PSWD
             - name: DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: homework-5-config
+                  name: gateway-config
                   key: DB_NAME
             - name: DB_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: homework-5-config
+                  name: gateway-config
                   key: DB_PORT
             - name: DB_HOST
               value: {{ include "postgresql.fullname" . | quote }}
