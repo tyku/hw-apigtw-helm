@@ -8,6 +8,7 @@ spec:
   selector:
     app: auth-service
   ports:
-    - port: 80
+    - port: 7001
       name: http
       targetPort: http
+      protocol: TCP

@@ -27,6 +27,7 @@ spec:
           ports:
             - name: http
               containerPort: {{ .Values.gateway.containerPort }}
+              protocol: TCP
           env:
             - name: NODE_ENV
               valueFrom:
