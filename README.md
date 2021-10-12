@@ -52,7 +52,7 @@ brew install newman
 ```
 and run prepared test
 ```
-newman run ./homework_2.postman_collection.json
+newman run ./homework-apigateway.postman_collection.json
 ```
 or import this file to postman, and start manually
 
