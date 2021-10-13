@@ -27,12 +27,14 @@ minikube service -n nginx-ingress ingress-nginx-controller
 
 ## Install auth service
 
+namespace default
 ```bash
 helm install gateway ./hw-apigtw-helm/gateway
 ```
 
 ## Install application
 
+namespace default
 ```bash
 helm install myapplication ./hw-apigtw-helm/app
 ```
